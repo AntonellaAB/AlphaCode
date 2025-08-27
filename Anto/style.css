@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla';
+
+}
+
+h1{
+    font-size: 50px;
+    /* line-height: 64;  controla la altura de cada línea de texto  */
+    color: #0e0e0e;
+    font-family: 'Montserrat';
+    
+}
+
+h2{
+    font-size: 46px;
+    /* line-height: 54; */
+    color: #2c2c2c;
+    font-family: 'Montserrat';
+}
+
+h3{
+    font-size: 30px;
+    color: #1f1f1f;
+    font-family: 'karla';
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+    font-family: 'karla';
+}
+
+p{
+    font-size: 16px;
+    color: #404040;
+    margin: 15px 0 20px 0;
+    font-family: 'karla';
+}
+
+.section-p1{
+    padding: 40px 80px;  
+}
+
+.section-m1{
+    margin: 40px 0;  
+}
+
+button.normal{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #f0f0f0;
+    background-color: #488e97;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+button.transparent{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #f0f0f0;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.3s ease;
+}
+/*Un hover global no funciona, se coloca uno a uno a todos los button*/
+
+body{
+    width: 100%;
+}
+
+
+
+
+/*Header section */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: #00454A;
+    box-shadow: 0 1px 15px #3e3e3e;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-family: 'Karla';
+} 
+/*------------LOGO SECTION------------*/
+.logo-container {
+    display: flex; 
+    align-items: center; /*Alinear verticalmente los ítems*/
+    /* gap: 10px; */ /* espacio entre logo y texto */
+    text-decoration: none;
+}
+
+.logo-container span {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 1.5em;  
+    font-weight: bold;  
+    color: #ffffff;
+    margin-left: 5px; 
+} 
+
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#navbar li{
+    list-style:none;
+    padding: 0 10px;
+    position: relative;
+}
+
+
+#navbar li a{       /* Estilo de letra de barra principal */
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
+    /* font-weight: 600; */
+    color: #ffff;
+    transition: 0.3s ease; /*para que el hover transicione mas smoothly*/ 
+
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #488e97;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content:"";
+    width: 30%;
+    height: 2px;
+    background: #488e97;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    transition: 0.3s ease;
+}   
+
+/*home page --------------------------------------------------------------------------*/
+#hero{
+    background-image:url("photos/Photo\ \(3\).jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover; /* This is likely what you need */
+    background-position: center center; /*Optional, but recommended*/
+    /* background-repeat: no-repeat; Optional, but recommended */
+    padding: 0px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; 
+    text-shadow: 0px 0px 50px #000000;
+    
+}
+
+#hero h4{
+    padding-bottom: 1px;
+    color: #ffffff;
+    font-family:'Lora';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+}
+#hero h1{
+    padding-bottom: 1px;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 60px;
+    
+}
+#hero h2{
+    color: #ffffff;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+
+#hero button:hover{
+    background-color: #8fa9ad;
+    border: #8fa9ad;
+}
+
+
+
+/*MISSION SECTION -------------------------------------------- */
+#mission {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.athenas-color {
+    font-weight: 400;
+    color: #1f1f1f;
+}
+
+.mission-color{
+    font-weight: 800;
+    color: #00454A;
+
+}
+
+#mission p {
+    max-width: 450px; /* El párrafo no excederá 700px, pero será más pequeño en pantallas chicas */
+    text-align: center;
+}
+
+
+#mission button:hover{
+    background-color: #8fa9ad;
+    border: #8fa9ad;
+}
+
+
+/*features section ----------------------------------------------*/
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 50px; /* 30px entre cada div */
+    
+}
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    border: 1px solid #242424;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 50px #e0e0e0;
+    border-radius: 4px;
+    margin: 15px 0;
+
+}
+
+.fe-box i {
+    font-size: 48px; /* Ajustar valor */
+}
+
+#feature .fe-box:hover{
+    background-color: #488e97;
+    color: #ffffff;
+}
+
+
+/*----------PRODUCTS SECTION------------------------------------*/ 
+#product1 {
+    text-align: center;
+}
+
+#product1 .product-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: none;
+    /* border: 1px solid #e0e0e0; */
+    /*border-radius: 25px;*/
+    cursor: pointer;
+    /*box-shadow: 5px 5px 20px #e0e0e0;*/
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+
+}
+
+#product1 .pro:hover{
+    box-shadow: 2px 2px 20px #eaeaea;
+
+}
+
+#product1 img{
+    /* Define el tamaño fijo para todas las imágenes */
+    width: 280px; 
+    height: 300px; 
+    
+    /* para rellenar las dimensiones - ESTIRA LA IMAGEN */
+    object-fit: cover; 
+    
+}
+
+
+/*product description*/
+
+
+#product1 .pro .description{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .description span{
+    color: #1f1f1f;
+    font-size: 12px;
+}
+
+#product1 .pro .description h5{
+    padding-top: 7px;
+    color: #1f1f1f;
+    font-size: 14px;
+}
+
+#product1 .pro .description h4{
+    padding-top: 7px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #00454A;
+}
+
+#product1 .pro .cart{
+    text-decoration: none; /*--- EL SUBRAYADO NO SALE!!*/
+    line-height: 1;
+    border-radius: 50px;
+    background-color: #8fa9ad;
+    font-weight: 500;
+    color: #ffffff; 
+    font-size: 20px;
+    padding: 10px; /* para expandir el fondo*/
+    display: inline-flex; /* Para centrar el icono dentro del círculo*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+}
+
+#product1 .pro .cart:hover{
+    background-color: #c4c4c4;
+    color: #ffffff;
+    
+}
+
+
+
+/* BANNERS SECTION ----------------------------------------------------------*/
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image:url("photos/Banner.png");
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h2{
+    padding: 10px 0;
+}
+
+#banner h2 span{
+    font-weight: 800;
+    color: #00454A;
+}
+
+#banner button:hover{
+    background-color: #8fa9ad;
+    border: #8fa9ad;
+}
+
+
+/* ----SMALL BANNER ---------------------------------------------------------- */
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("photos/productos/original session (1).png");
+    min-width: 640px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+#sm-banner .banner-box2 {
+    background-image: url("photos/productos/original session (2).png");
+}
+#sm-banner h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300; 
+}
+
+#sm-banner h2{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    background-color: #00454A;
+    /* border: #8fa9ad; */
+}
+
+/* Tiny Banner --------------------------------------------------------- */
+
+#tiny-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#tiny-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image:url("photos/productos/original session (3).png");
+    min-width: 32%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#tiny-banner h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#tiny-banner h3{
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#tiny-banner .banner-box2 {
+    background-image:url("photos/photo.png");
+}
+
+#tiny-banner .banner-box3 {
+    background-image: url("photos/Photo (1).jpg");
+}
+
+
+/* Newsletter Section --------------------------------------------- */
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image:url("photos/Banner.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+}
+
+#newsletter h2{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#newsletter p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#newsletter p span{
+    font-weight: 700;
+    color: #00454A;
+}
+
+#newsletter .form{
+    display: flex;
+    width: 40%;
+
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#newsletter button:hover{
+    background-color: #8fa9ad;
+    border: #8fa9ad;
+}
+
+
+/* FOOTER SECTION ------------------------------------------------------------------ */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se bajen automáticamente */
+    padding: 20px;
+}
+
+footer .col{
+    flex: 1; 
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+ 
+footer .logo{
+    margin-bottom: 30px;
+}
+ 
+footer h4{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+footer p{
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+footer a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #94bfc2;
+}
+
+footer .col img{
+    margin: 10px 0 10px 0;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
